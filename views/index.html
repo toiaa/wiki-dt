@@ -3,7 +3,11 @@
 {% block content %}
   <h3>Pages</h3>
   <hr>
+
   <ul class="list-unstyled">
-    <!-- PLACEHOLDER LIST OF PAGES -->
+    {% for page in pages %}
+      <li><a href="#"> {{page.title}}</a></li>
+        <div class="page-body">{{page.content}}</div>
+    {% endfor %}
   </ul>
 {% endblock %}
